@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class FirstQuestion {
     public static void main(String[] args){
 //        Problem Statement
@@ -24,5 +26,23 @@ public class FirstQuestion {
 //        500
 
 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Please enter the number of triples: ");
+        int N = sc.nextInt();
+            for (int i = 0; i < N; i++) {
+                System.out.print("Please enter three number: ");
+                int num1 = sc.nextInt();
+                int num2 = sc.nextInt();
+                int num3 = sc.nextInt();
+
+                if (num1 > num2 && num1 < num3 || num1 > num3 && num1 < num2)
+                    System.out.println("The middle value is " +num1);
+                else if (num2 > num1 && num2 < num3 || num2 > num3 && num2 < num1)
+                    System.out.println("The middle value is " + num2);
+                else
+                    System.out.println("The middle value is " + num3);
+            }
+        sc.close();
     }
 }

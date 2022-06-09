@@ -31,7 +31,7 @@ public class FirstQuestion {
         System.out.print("Please enter the number of triples: ");
         int N = sc.nextInt();
             for (int i = 0; i < N; i++) {
-                System.out.print("Please enter three number: ");
+                System.out.print("Please enter three numbers: ");
                 int num1 = sc.nextInt();
                 int num2 = sc.nextInt();
                 int num3 = sc.nextInt();

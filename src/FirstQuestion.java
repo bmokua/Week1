@@ -28,21 +28,44 @@ public class FirstQuestion {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Please enter the number of triples: ");
-        int N = sc.nextInt();
-            for (int i = 0; i < N; i++) {
-                System.out.print("Please enter three numbers: ");
-                int num1 = sc.nextInt();
-                int num2 = sc.nextInt();
-                int num3 = sc.nextInt();
-
-                if (num1 > num2 && num1 < num3 || num1 > num3 && num1 < num2)
-                    System.out.println("The middle value is " +num1);
-                else if (num2 > num1 && num2 < num3 || num2 > num3 && num2 < num1)
-                    System.out.println("The middle value is " + num2);
-                else
-                    System.out.println("The middle value is " + num3);
+        boolean valid = false;
+        int N = 0;
+        while(!valid){
+            System.out.print("Please enter the number of triples; " +
+                    "the number has to be greater than or equal to 1 and less than or equal to 6:");
+            N = sc.nextInt();
+            if(N >= 1 && N <= 6){
+                valid = true;
+            }else{
+                System.out.println("Invalid input");
             }
+
+        }
+
+            for (int i = 0; i < N; i++) {
+                boolean valid1 = false;
+                while (!valid1) {
+                    System.out.print("Please enter three distinct numbers that are greater " +
+                            "than or equal to 1 and less than or equal to 10000:");
+                    int num1 = sc.nextInt();
+                    int num2 = sc.nextInt();
+                    int num3 = sc.nextInt();
+                    if((num1 >=1 && num1 <=10000) && (num2 >=1 && num2 <=10000) && (num3 >=1 && num3 <=10000)
+                    && (num1 != num2) && (num2 != num3) && (num1 != num3)){
+                        valid1 = true;
+                        if (num1 > num2 && num1 < num3 || num1 > num3 && num1 < num2)
+                            System.out.println("The middle value is " + num1);
+                        else if (num2 > num1 && num2 < num3 || num2 > num3 && num2 < num1)
+                            System.out.println("The middle value is " + num2);
+                        else
+                            System.out.println("The middle value is " + num3);
+
+                    }else{
+                        System.out.println("Invalid input; the values do not meet the criteria.");
+                    }
+                }
+            }
+
         sc.close();
     }
 }

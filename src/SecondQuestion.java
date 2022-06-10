@@ -62,6 +62,7 @@ public class SecondQuestion {
                 }
             }
         }
+        sc.close();
     }
 
 }

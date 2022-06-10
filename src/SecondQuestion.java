@@ -36,7 +36,7 @@ public class SecondQuestion {
             if(T >= 1 && T <= 1000){
                 valid = true;
             }else{
-                System.out.println("Invalid input");
+                System.out.println("Invalid input; the value does not meet the criteria.");
             }
 
         }
@@ -58,7 +58,7 @@ public class SecondQuestion {
                     }
                     System.out.println("Your total is " +total);
                 }else{
-                    System.out.println("Invalid input");
+                    System.out.println("Invalid input; the string does not meet the criteria.");
                 }
             }
         }

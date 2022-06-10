@@ -37,7 +37,7 @@ public class FirstQuestion {
             if(N >= 1 && N <= 6){
                 valid = true;
             }else{
-                System.out.println("Invalid input");
+                System.out.println("Invalid input; the value does not meet the criteria.");
             }
 
         }
